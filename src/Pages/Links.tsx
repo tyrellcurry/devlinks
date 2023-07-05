@@ -1,6 +1,11 @@
+import Navigation from "../components/Navigation";
+
 function Links() {
-  return (
-    <div>Links</div>
-  )
+    return (
+        <>
+            <Navigation />
+            <div>Links</div>
+        </>
+    );
 }
-export default Links
+export default Links;

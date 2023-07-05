@@ -1,6 +1,11 @@
+import Navigation from "../components/Navigation";
+
 function Profile() {
-  return (
-    <div>Profile</div>
-  )
+    return (
+        <>
+            <Navigation />
+            <div>Profile</div>
+        </>
+    );
 }
-export default Profile
+export default Profile;
