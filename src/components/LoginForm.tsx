@@ -7,13 +7,15 @@ const LoginForm = () => {
 
         img {
             width: 100%;
+			padding-bottom: 4rem;
+			max-width: 183px;
         }
     `;
     const SectionContainer = styled.section`
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 325px;
         margin: auto;
         h1 {
             font-size: clamp(1.85rem, 4vw, 2.15rem);
