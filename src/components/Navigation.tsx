@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import Logo from "../images/logo-devlinks-large.svg"
+import LinksIcon from "../images/icon-link.svg"
+import ProfileIcon from "../images/icon-profile-details-header.svg"
+
 
 const Navigation = () => {
     const Nav = styled.nav`
@@ -29,12 +33,22 @@ const Navigation = () => {
     return (
         <>
             <Nav>
+                <NavLink to="/">
+                    <img src={Logo} alt="" />
+                </NavLink>
                 <ul>
                     <li>
-                        <NavLink to="/links">Links</NavLink>
-                        <NavLink to="/profile">Profile</NavLink>
+                        <NavLink to="/links">
+                            <img src={LinksIcon} />
+                            Links
+                        </NavLink>
+                        <NavLink to="/profile">
+                            <img src={ProfileIcon} />
+                            Profile
+                        </NavLink>
                     </li>
                 </ul>
+                <button>Preview</button>
             </Nav>
         </>
     );
