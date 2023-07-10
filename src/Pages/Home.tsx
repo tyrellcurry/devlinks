@@ -7,9 +7,10 @@ import Layout from "../components/Layout";
 function Home() {
     return (
         <>
-            <h1>Homepage</h1>
             <Layout>
+                <section style={{paddingTop: '10vh'}}>
                 <LoginForm />
+                </section>
             </Layout>
         </>
     );

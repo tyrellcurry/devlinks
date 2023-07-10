@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Logo from "../images/logo-devlinks-large.svg";
+import EmailIcon from "../images/icon-email.svg";
+import PasswordIcon from "../images/icon-password.svg";
 const LoginForm = () => {
     const LogoContainer = styled.div`
         width: fit-content;
@@ -7,8 +9,8 @@ const LoginForm = () => {
 
         img {
             width: 100%;
-			padding-bottom: 4rem;
-			max-width: 183px;
+            padding-bottom: 4rem;
+            max-width: 183px;
         }
     `;
     const SectionContainer = styled.section`
@@ -18,7 +20,7 @@ const LoginForm = () => {
         max-width: 325px;
         margin: auto;
         h1 {
-            font-size: clamp(1.85rem, 4vw, 2.15rem);
+            font-size: 2.15rem;
             margin: 0;
         }
         p.subtitle {
@@ -26,11 +28,11 @@ const LoginForm = () => {
         }
         p.create a {
             text-decoration: none;
-            color: #633CFF;
+            color: #633cff;
         }
         p.create a:hover {
-			color: #beadff;
-			text-decoration: underline;
+            color: #beadff;
+            text-decoration: underline;
         }
         form {
             display: flex;
@@ -42,9 +44,22 @@ const LoginForm = () => {
             border: 1px solid #d9d9d9;
             margin-bottom: 1.35rem;
         }
+        form #email {
+            background-image: url(${EmailIcon});
+            background-position: 9px center;
+            background-repeat: no-repeat;
+            padding-left: 2rem;
+        }
+        form #password {
+            background-image: url(${PasswordIcon});
+            background-position: 9px center;
+            background-repeat: no-repeat;
+            padding-left: 2rem;
+        }
+
         form label {
             padding-bottom: 0.25rem;
-            font-size: .85rem;
+            font-size: 0.85rem;
         }
         button {
             background-color: #633cff;
@@ -61,13 +76,16 @@ const LoginForm = () => {
             transition: background-color 115ms linear;
         }
         button:hover {
+
             background-color: #beadff;
         }
     `;
     return (
         <>
             <LogoContainer>
-                <img src={Logo} alt="" />
+                <a href="/">
+                    <img src={Logo} alt="" />
+                </a>
             </LogoContainer>
             <SectionContainer>
                 <h1>Login</h1>
@@ -92,9 +110,10 @@ const LoginForm = () => {
                     <button type="submit">Login</button>
                 </form>
                 <p className="create">
-                    Don’t have an account?{" "}
-                    <a href="">Create account</a>
+                    Don’t have an account? <a href="">Create account</a>
                 </p>
+                <p>Or</p>
+                <p>Sign In With Your Google Account</p>
             </SectionContainer>
         </>
     );
