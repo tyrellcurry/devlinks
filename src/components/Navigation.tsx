@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import Logo from "../images/logo-devlinks-large.svg"
-import LinksIcon from "../images/icon-link.svg"
-import ProfileIcon from "../images/icon-profile-details-header.svg"
-
+import { ReactComponent as LinksIcon } from "../images/icon-link.svg"
+import { ReactComponent as ProfileIcon } from "../images/icon-profile-details-header.svg"
 
 const Navigation = () => {
     const Nav = styled.nav`
         display: flex;
-        background: grey;
-        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: #beeeff;
+        padding-left: 10vw;
+        padding-right: 10vw;
 
         ul li {
             display: flex;
@@ -17,16 +19,39 @@ const Navigation = () => {
         }
 
         ul li a {
-            color: #fff;
+            color: #737373;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li a svg {
+            padding-right: .5rem;
+        }
+        ul li a:hover > svg path {
+            fill: #633CFF;
         }
 
         ul li a:hover {
-            color: #00a8ff;
+            color: #633CFF;
         }
 
         ul li a.active {
-            color: #00a8ff;
+            color: #633CFF;
+        }
+        
+        ul li a.active > svg path {
+            fill: #633CFF;
+        }
+
+        button {
+            background-color: #fff;
+            border: 2px solid #633CFF;
+            border-radius: 8px;
+            color: #633CFF;
+            padding: .65rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
         }
     `;
 
@@ -39,11 +64,11 @@ const Navigation = () => {
                 <ul>
                     <li>
                         <NavLink to="/links">
-                            <img src={LinksIcon} />
+                            <LinksIcon />
                             Links
                         </NavLink>
                         <NavLink to="/profile">
-                            <img src={ProfileIcon} />
+                            <ProfileIcon />
                             Profile
                         </NavLink>
                     </li>
