@@ -69,14 +69,8 @@ const LoginForm = () => {
             padding: 0.65rem 0;
             border-radius: 8px;
             cursor: pointer;
-            -webkit-transition: background-color 115ms linear;
-            -moz-transition: background-color 115ms linear;
-            -o-transition: background-color 115ms linear;
-            -ms-transition: background-color 115ms linear;
-            transition: background-color 115ms linear;
         }
         button:hover {
-
             background-color: #beadff;
         }
     `;
