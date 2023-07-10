@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 import Logo from "../images/logo-devlinks-large.svg"
 import { ReactComponent as LinksIcon } from "../images/icon-link.svg"
 import { ReactComponent as ProfileIcon } from "../images/icon-profile-details-header.svg"
@@ -12,6 +12,10 @@ const Navigation = () => {
         background: #beeeff;
         padding-left: 10vw;
         padding-right: 10vw;
+
+        .logo img {
+            max-width: 150px;
+        }
 
         ul li {
             display: flex;
@@ -53,12 +57,15 @@ const Navigation = () => {
             font-size: 1rem;
             cursor: pointer;
         }
+        button:hover {
+            background-color: #EFEBFF;
+        }
     `;
 
     return (
         <>
             <Nav>
-                <NavLink to="/">
+                <NavLink className="logo" to="/">
                     <img src={Logo} alt="" />
                 </NavLink>
                 <ul>
