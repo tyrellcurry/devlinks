@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import styled from "styled-components";
 import Iphone from "../images/illustration-phone-mockup-empty.svg"
 import IphoneFinger from "../images/illustration-empty.svg"
+import SaveButton from "../components/SaveButton";
 
 function Links() {
     const LinksPage = styled.section`
@@ -56,27 +57,7 @@ function Links() {
             max-width: 400px;
             margin: auto;
         }
-        button.save {
-            display: flex;
-            background-color: #beadff;
-            border: 2px solid #beadff;
-            color: #fff;
-            border-radius: 8px;
-            padding: 0.65rem 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: not-allowed;
-            margin-left: auto;
-        }
-        button.save:hover {
-            background-color: #beadff;
-        }
-        button.save.active {
-            background-color: #633cff;
-            border-color: #633cff;
-            cursor: pointer;
-        }
-    `;
+   `;
     return (
         <>
             <Navigation />
@@ -105,9 +86,7 @@ function Links() {
                             </p>
                         </div>
                     </div>
-                    <button className="save" disabled>
-                        Save
-                    </button>
+                    <SaveButton />
                 </div>
             </LinksPage>
         </>
