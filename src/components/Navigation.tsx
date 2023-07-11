@@ -10,6 +10,7 @@ const Navigation = () => {
         justify-content: space-between;
         align-items: center;
         background: #beeeff;
+        padding-top: 1.5rem;
         padding-left: 10vw;
         padding-right: 10vw;
 
