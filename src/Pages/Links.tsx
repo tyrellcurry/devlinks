@@ -1,8 +1,8 @@
 import Navigation from "../components/Navigation";
 import styled from "styled-components";
-import Iphone from "../images/illustration-phone-mockup-empty.svg"
 import IphoneFinger from "../images/illustration-empty.svg"
 import SaveButton from "../components/SaveButton";
+import IphoneLinks from "../components/IphoneLinks";
 
 function Links() {
     const LinksPage = styled.section`
@@ -15,6 +15,7 @@ function Links() {
             padding-right: 10vw;
         }
         .right {
+            width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
@@ -63,7 +64,8 @@ function Links() {
             <Navigation />
             <LinksPage>
                 <div className="left">
-                    <img src={Iphone} alt="" />
+                    <IphoneLinks />
+                    {/* <img src={Iphone} alt="" /> */}
                 </div>
                 <div className="right">
                     <div className="content">
