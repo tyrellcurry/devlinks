@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PhotoIcon from "../images/icon-upload-image.svg"
 import Navigation from "../components/Navigation";
 import SaveButton from "../components/SaveButton";
 import IphoneLinks from "../components/IphoneLinks";
@@ -18,6 +19,38 @@ function Profile() {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+        .right .pp {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pp .upload {
+            display: flex;
+            align-items: center;
+        }
+        .upload .img button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1.5rem;
+            color: #633CFF;
+            font-weight: 600;
+            font-size: .85rem;
+            cursor: pointer;
+            background-color: #EFEBFF;
+            border: none;
+            border-radius: 12px;
+            transition: background .125s ease-in-out;
+            &:hover {
+                background-color: #e7e1fe;
+            }
+        }
+        .upload .img button img {
+            padding-bottom: .5rem;
+        }
+        .upload p {
+            padding-left: 1rem;
         }
     `;
     const Form = styled.form`
@@ -49,10 +82,10 @@ function Profile() {
                             <p>Profile picture</p>
                             <div className="upload">
                                 <div className="img">
-                                    <button>+ Upload Image</button>
+                                    <button><img src={PhotoIcon} />+ Upload Image</button>
                                 </div>
                                 <p>
-                                    Image must ve velow 1024x1024px. <br />
+                                    Image must be below 1024x1024px. <br />
                                     Use PNG or JPG format.
                                 </p>
                             </div>
